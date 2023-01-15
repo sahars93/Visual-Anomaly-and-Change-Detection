@@ -28,8 +28,8 @@ print('total comparison for finding thresholds : {}'.format(length))
 for i, val_k in enumerate(list_k):
     for j , val_m in enumerate(list_m):
         print('comparison for matching_thresh: {}, and keypoint_thresh: {}'.format(val_m,val_k))
-        subprocess.call(['python3', 'match_pairs.py', '--viz', '--input_pairs','assets/calib.txt',
-        '--input_dir','assets/calib/', '--show_keypoints','--output_dir','calibration_results/',
+        subprocess.call(['python3', 'superpoint_superglue/match_pairs.py', '--viz', '--input_pairs','calib.txt',
+        '--input_dir','few_shots/', '--show_keypoints','--output_dir','calibration_results/',
         '--max_length' ,f'{num_cam*num_pairs}','--keypoint_threshold', f'{val_k}',
         '--match_threshold', f'{val_m}'])
         
