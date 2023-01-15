@@ -18,9 +18,9 @@ length = (len(np.arange(0, max_step_k, step_k))) * (len(np.arange(0, max_step_m,
 points0 = np.zeros((len(np.arange(0, max_step_m, step_m)),num_pairs,2))
 points1 = np.zeros((len(np.arange(0, max_step_m, step_m)),num_pairs,2))
 points2 = np.zeros((len(np.arange(0, max_step_m, step_m)),num_pairs,2))
-list_k = list(np.arange(0, max_step_k, step_k))
+# list_k = list(np.arange(0, max_step_k, step_k))
 list_m = list(np.arange(0, max_step_m, step_m))
-
+list_k = [0.003]
 
 print('total comparison for finding thresholds : {}'.format(length))
 
