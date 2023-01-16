@@ -11,8 +11,7 @@ matching and instance segmentation methods to detect anomalies based on referenc
 
 ## Self-Calibration
 
-![](./self_calibration/calibration_results/cameras_key_thresh0.003.png)
-
+![](./self_calibration/calibration_results/cameras_key_thresh0.003.png width="60%" height="50%)
 
 
 ## Dependencies
