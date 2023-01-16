@@ -67,12 +67,12 @@ def dbscan(not_match_points):
  
     return clusters
 
-subprocess.call(['python3', 'self_calibration/superpoint_superglue/match_pairs.py', '--viz', '--show_keypoints',
-                '--max_length','--input_pairs','images/images_pair.txt', 
-                '1000', '--match_threshold', '0.4',
-                '--keypoint_threshold','0.003','--input_dir','images/'])
+# replace the the input images and txt with the assets folder inputs
 
-f=open('images/images_pair.txt')
+subprocess.call(['python3', 'self_calibration/superpoint_superglue/match_pairs.py', '--viz', '--show_keypoints','--max_length' 
+                 ,'1000', '--match_threshold', '0.4','--keypoint_threshold','0.003','--input_pairs','images_pairs.txt',])
+
+f=open('self_calibration/superpoint_superglue/assets/images_pairs.txt')
 lines = f.readlines()
 new_list = [s.replace("\n", "").replace(".jpg", "").split(' ') for s in lines]
 

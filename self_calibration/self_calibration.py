@@ -24,20 +24,19 @@ list_k = [0.003]
 
 print('total comparison for finding thresholds : {}'.format(length))
 
-
+# replace the the few shots and txt with the assets folder inputs
 for i, val_k in enumerate(list_k):
     for j , val_m in enumerate(list_m):
         print('comparison for matching_thresh: {}, and keypoint_thresh: {}'.format(val_m,val_k))
-        subprocess.call(['python3', 'superpoint_superglue/match_pairs.py', '--viz', '--input_pairs','calib.txt',
-        '--input_dir','few_shots/', '--show_keypoints','--output_dir','calibration_results/',
-        '--max_length' ,f'{num_cam*num_pairs}','--keypoint_threshold', f'{val_k}',
+        subprocess.call(['python3', 'superpoint_superglue/match_pairs.py', '--viz',
+        '--show_keypoints', '--max_length' ,f'{num_cam*num_pairs}','--keypoint_threshold', f'{val_k}',
         '--match_threshold', f'{val_m}'])
         
 
         for cam, points in enumerate([points0, points1,points2]):
 
             for p in range(num_pairs):
-                m = np.load('calibration_results/tresh{}{}0_tresh{}{}1_matches.npz'.format(cam,p,cam,p))
+                m = np.load('superpoint_superglue/dump_match_pairs/thresh{}{}0_thresh{}{}1_matches.npz'.format(cam,p,cam,p))
                 b1 = m['matches1']
                 b0 = m['matches0']
 
