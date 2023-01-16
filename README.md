@@ -17,3 +17,6 @@ matching and instance segmentation methods to detect anomalies based on referenc
 
 ## Dependencies
 You should have a full installation of ROS2 (including Gazebo + Rviz2).
+
+
+Note::::::::
