@@ -15,7 +15,7 @@ We calibrated the SuperPoint and the SuperGlue models using a few-shot procedure
 
 
 <p float="center">
-  <img src="./self_calibration/calibration_results/cameras_key_thresh0.003.png" width="230" />
+  <img src="./self_calibration/calibration_results/cameras_key_thresh0.003.png" width="400" />
 </p>
 
 ## Results
