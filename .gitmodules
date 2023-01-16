@@ -1,3 +1,6 @@
 [submodule "self_calibration/superpoint_superglue"]
 	path = self_calibration/superpoint_superglue
 	url = https://github.com/magicleap/SuperGluePretrainedNetwork.git
+[submodule "detectron2"]
+	path = detectron2
+	url = https://github.com/facebookresearch/detectron2.git
