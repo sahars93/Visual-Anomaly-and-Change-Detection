@@ -31,7 +31,7 @@ def segment(masked_im):
     point_rend.add_pointrend_config(cfg)
     cfg.merge_from_file("detectron2/configs/COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml")
     cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.3 
-    cfg.MODEL.WEIGHTS = "my_data/model_final_2d9806.pkl" #download from https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md
+    cfg.MODEL.WEIGHTS = "detectron2/model_final_2d9806.pkl" #download from https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md
     predictor = DefaultPredictor(cfg)
     outputs = predictor(img0_msk)
     return outputs, cfg
@@ -67,17 +67,16 @@ def dbscan(not_match_points):
  
     return clusters
 
-subprocess.call(['python3', 'match_pairs.py', '--viz', '--show_keypoints',
+subprocess.call(['python3', 'self_calibration/superpoint_superglue/match_pairs.py', '--viz', '--show_keypoints',
                 '--max_length','--input_pairs','images/images_pair.txt', 
                 '1000', '--match_threshold', '0.4',
-                '--keypoint_threshold','0.003','--input_dir','images/',
-                 '--output_dir','matching_results/',])
+                '--keypoint_threshold','0.003','--input_dir','images/'])
 
 f=open('images/images_pair.txt')
 lines = f.readlines()
 new_list = [s.replace("\n", "").replace(".jpg", "").split(' ') for s in lines]
 
-data = np.load('matching_results/{}_{}_matches.npz'.format(new_list[0][0],new_list[0][1]))
+data = np.load('self_calibration/superpoint_superglue/dump_match_pairs/{}_{}_matches.npz'.format(new_list[0][0],new_list[0][1]))
 
 img1 = cv2.imread('images/{}.jpg'.format(new_list[0][1]))
 img0 = cv2.imread('images/{}.jpg'.format(new_list[0][0])) #anomaly
@@ -191,10 +190,10 @@ plt.imshow(out)
 plt.axis('off')
 
 
-plt.savefig('results_powerpoint/final_seg2.jpg',dpi=200,bbox_inches='tight',pad_inches=0)
+plt.savefig('results_images/final_seg2.jpg',dpi=200,bbox_inches='tight',pad_inches=0)
 
 plt.scatter(final_nmp[:,0],final_nmp[:,1],s=10,c='red')
-plt.savefig('results_powerpoint/a_final.jpg',dpi=200,bbox_inches='tight',pad_inches=0)
+plt.savefig('results_images/a_final.jpg',dpi=200,bbox_inches='tight',pad_inches=0)
 plt.clf()
 
 out2 = cv2.addWeighted(img0_msk, 0.8, img0, 0.4,0)
@@ -213,7 +212,7 @@ yrr = np.array(yr)
 
 plt.scatter(xgr,ygr,s=2,c='red')
 plt.scatter(xrr,yrr,s=2,c='red')
-plt.savefig('results_powerpoint/overlapedPoints.jpg',dpi=200,bbox_inches='tight',pad_inches=0)
+plt.savefig('results_images/overlapedPoints.jpg',dpi=200,bbox_inches='tight',pad_inches=0)
 # plt.show()
 
 
@@ -221,7 +220,7 @@ plt.imshow(img0)
 plt.axis('off')
 plt.scatter(not_match0[:,0],not_match0[:,1],s=2,c='red')
 plt.scatter(match_p0[:,0],match_p0[:,1],s=2,c='green')
-plt.savefig('results_powerpoint/scatterPoints.jpg',dpi=200,bbox_inches='tight',pad_inches=0)
+plt.savefig('results_images/scatterPoints.jpg',dpi=200,bbox_inches='tight',pad_inches=0)
 plt.clf()
 
 
@@ -230,4 +229,4 @@ out3 = cv2.addWeighted(img0_msk, 0.8, masked_img_all, 0.4,0)
 plt.imshow(out3)
 plt.axis('off')
 
-plt.savefig('results_powerpoint/all_seg.jpg',dpi=200,bbox_inches='tight',pad_inches=0)
+plt.savefig('results_images/all_seg.jpg',dpi=200,bbox_inches='tight',pad_inches=0)
