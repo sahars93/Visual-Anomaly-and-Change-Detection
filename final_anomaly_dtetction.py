@@ -29,9 +29,9 @@ def segment(masked_im):
     img0_msk = masked_im
     cfg = get_cfg()
     point_rend.add_pointrend_config(cfg)
-    cfg.merge_from_file("my_data/detectron2-main/configs/COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml")
+    cfg.merge_from_file("detectron2/configs/COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml")
     cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.3 
-    cfg.MODEL.WEIGHTS = "my_data/model_final_2d9806.pkl"
+    cfg.MODEL.WEIGHTS = "my_data/model_final_2d9806.pkl" #download from https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md
     predictor = DefaultPredictor(cfg)
     outputs = predictor(img0_msk)
     return outputs, cfg
