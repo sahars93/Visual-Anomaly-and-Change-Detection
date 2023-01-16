@@ -22,8 +22,8 @@ We calibrated the SuperPoint and the SuperGlue models using a few-shot procedure
 
 
 <p float="left">
-  <img src="./input_images/b1.jpeg" width="240" />
-  <img src="./input_images/b2.jpeg" width="240" /> 
-  <img src="./output_images/scatterPoints.jpg" width="240" />
-  <img src="./output_images/a_final.jpg" width="240" />
+  <img src="./input_images/b1.jpeg" width="230" />
+  <img src="./input_images/b2.jpeg" width="230" /> 
+  <img src="./output_images/overlapedPoints.jpg" width="230" />
+  <img src="./output_images/a_final.jpg" width="230" />
 </p>
