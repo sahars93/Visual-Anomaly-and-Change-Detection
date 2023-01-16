@@ -11,11 +11,10 @@ matching and instance segmentation methods to detect anomalies based on referenc
 
 ## Self-Calibration
 
-![](./self_calibration/calibration_results/cameras_key_thresh0.003.png width="60%" height="50%)
+We calibrated the SuperPoint and the SuperGlue models using a few-shot procedure since the number of matched and non-matched points varies depending on different thresholds. The appropriate thresholds should yield a low standard deviation of the distribution of distances between matched keypoint pairs.
+
+![](./self_calibration/calibration_results/cameras_key_thresh0.003.png)
 
 
-## Dependencies
-You should have a full installation of ROS2 (including Gazebo + Rviz2).
-
-
-Note::::::::
+## Results
+![](./output_images/all_together.png)
