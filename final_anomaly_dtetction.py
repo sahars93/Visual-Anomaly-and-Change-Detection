@@ -67,17 +67,20 @@ def dbscan(not_match_points):
  
     return clusters
 
-subprocess.call(['python3', 'match_pairs.py', '--viz', '--show_keypoints','--max_length' 
-,'1000', '--match_threshold', '0.4','--keypoint_threshold','0.003'])
+subprocess.call(['python3', 'match_pairs.py', '--viz', '--show_keypoints',
+                '--max_length','--input_pairs','images/images_pair.txt', 
+                '1000', '--match_threshold', '0.4',
+                '--keypoint_threshold','0.003','--input_dir','images/',
+                 '--output_dir','matching_results/',])
 
-f=open('assets/scannet_sample_pairs_with_gt.txt')
+f=open('images/images_pair.txt')
 lines = f.readlines()
 new_list = [s.replace("\n", "").replace(".jpg", "").split(' ') for s in lines]
 
-data = np.load('dump_match_pairs/{}_{}_matches.npz'.format(new_list[0][0],new_list[0][1]))
+data = np.load('matching_results/{}_{}_matches.npz'.format(new_list[0][0],new_list[0][1]))
 
-img1 = cv2.imread('assets/scannet_sample_images/{}.jpg'.format(new_list[0][1]))
-img0 = cv2.imread('assets/scannet_sample_images/{}.jpg'.format(new_list[0][0])) #anomaly
+img1 = cv2.imread('images/{}.jpg'.format(new_list[0][1]))
+img0 = cv2.imread('images/{}.jpg'.format(new_list[0][0])) #anomaly
 
 
 img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
