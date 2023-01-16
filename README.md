@@ -18,8 +18,10 @@ We calibrated the SuperPoint and the SuperGlue models using a few-shot procedure
 
 ## Results
 
-![](./output_images/all_together.png)
 
+<p float="center">
+  <img src="./output_images/all_together.png" width="230" />
+</p>
 
 <p float="left">
   <img src="./input_images/b1.jpeg" width="230" />
