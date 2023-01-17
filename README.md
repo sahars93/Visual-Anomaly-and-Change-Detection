@@ -3,29 +3,38 @@
 
 Analysis of  Self-Calibrating Anomaly and Change Detection for Autonomous Inspection Robots
 
+Full paper PDF: [Self-Calibrating Anomaly and Change Detection for Autonomous Inspection Robots](https://arxiv.org/pdf/2209.02379.pdf).
+
 ## Introduction
 
-This work proposes a comprehensive deep learning framework for detecting anomalies and changes in a priori unknown environments after a reference dataset is gathered.
-We use the SuperPoint and SuperGlue feature extraction and
-matching and instance segmentation methods to detect anomalies based on reference images from a similar location. 
+This work proposes a comprehensive deep learning framework for detecting anomalies and changes in a priori unknown environments after a reference dataset is gathered. We use the SuperPoint and SuperGlue feature extraction and matching and instance segmentation methods to detect anomalies based on reference images from a similar location. 
+
+## How to run
+
+   0. Clone repo
+      ```
+      git clone git@github.com:sahars93/Visual-Anomaly-and-Change-Dtecection-.git
+      ```
+   1. Install Detectron2
+      ```
+      git submodule update --init --recursive
+      ```
+   2. Install superpoint:
+      ```
+      cd self_calibration
+      git submodule update --init --recursive
+      ```
+   3. Run
+      ```
+      python3 final_anomaly_detection.py
 
 ## Self-Calibration
-
-We calibrated the SuperPoint and the SuperGlue models using a few-shot procedure since the number of matched and non-matched points varies depending on different thresholds. The appropriate thresholds should yield a low standard deviation of the distribution of distances between matched keypoint pairs.
-
-
-<p float="center">
+<div align=center>
   <img src="./self_calibration/calibration_results/cameras_key_thresh0.003.png" width="500" />
-</p>
+  <p align="center">Calubration results for three different cameras</p>
+</div>
+
+
 
 ## Results
-
 ![](./output_images/all_together.png)
-
-
-<p float="left">
-  <img src="./input_images/b1.jpeg" width="230" />
-  <img src="./input_images/b2.jpeg" width="230" /> 
-  <img src="./output_images/overlapedPoints.jpg" width="230" />
-  <img src="./output_images/a_final.jpg" width="230" />
-</p>
