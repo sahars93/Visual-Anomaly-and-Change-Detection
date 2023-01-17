@@ -36,7 +36,7 @@ Full paper PDF: [Self-Calibrating Anomaly and Change Detection for Autonomous In
 
 Reference image            |  Query image            |  Feature extraction in overlap area            |  Final change detection        
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------: 
-![](./input_images/b1.jpeg)  |  ![](./input_images/b2.jpeg)  |  ![](./output_images/overlapedPoints.jpg)  |  ![](./output_images/a_final.jpg)
+!<img src="./input_images/b1.jpeg" width="240" />  |  ![](./input_images/b2.jpeg)  |  ![](./output_images/overlapedPoints.jpg)  |  ![](./output_images/a_final.jpg)
 
 
 <div align=center>
