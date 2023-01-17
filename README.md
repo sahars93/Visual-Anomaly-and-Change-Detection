@@ -38,12 +38,7 @@ Reference image            |  Query image            |  Feature extraction in ov
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------: 
 <img src="./input_images/b1.jpeg" width="240" />  |  <img src="./input_images/b2.jpeg" width="240" />  |  <img src="./output_images/overlapedPoints.jpg" width="240" />  |  <img src="./output_images/a_final.jpg" width="240" />
 
+<img src="./input_images/b1.jpeg" width="240" />  |  <img src="./input_images/b2.jpeg" width="240" />  |  <img src="./output_images/overlapedPoints1.jpg" width="240" />  |  <img src="./output_images/a_final1.jpg" width="240" />
 
-<div align=center>
-  <img src="./input_images/b1.jpeg" width="240" />
-  <img src="./input_images/b2.jpeg" width="240" />
-  <img src="./output_images/overlapedPoints.jpg" width="240" />
-  <img src="./output_images/a_final.jpg" width="240" />
-</div>
 
 ![](./output_images/all_together.png)
