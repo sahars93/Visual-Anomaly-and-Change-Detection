@@ -1,4 +1,3 @@
-
 # Visual anomaly and change detection
 
 Analysis of  Self-Calibrating Anomaly and Change Detection for Autonomous Inspection Robots
