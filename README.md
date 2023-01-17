@@ -3,11 +3,11 @@
 
 Analysis of  Self-Calibrating Anomaly and Change Detection for Autonomous Inspection Robots
 
-Full paper PDF: [Self-Calibrating Anomaly and Change Detection for Autonomous Inspection Robots](https://arxiv.org/pdf/2209.02379.pdf).
-
 ## Introduction
 
 This work proposes a comprehensive deep learning framework for detecting anomalies and changes in a priori unknown environments after a reference dataset is gathered. We use the SuperPoint and SuperGlue feature extraction and matching and instance segmentation methods to detect anomalies based on reference images from a similar location. 
+
+Full paper PDF: [Self-Calibrating Anomaly and Change Detection for Autonomous Inspection Robots](https://arxiv.org/pdf/2209.02379.pdf).
 
 ## How to run
 
