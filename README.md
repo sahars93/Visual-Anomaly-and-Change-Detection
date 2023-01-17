@@ -12,11 +12,11 @@ Full paper PDF: [Self-Calibrating Anomaly and Change Detection for Autonomous In
 
    0. Clone repo
       ```
-      git clone git@github.com:sahars93/Visual-Anomaly-and-Change-Dtecection-.git
+      git clone git@github.com:sahars93/Visual-Anomaly-and-Change-Dtecection.git
       ```
    1. Install Detectron2 and Superpoint:
       ```
-      cd Visual-Anomaly-and-Change-Dtecection-/
+      cd Visual-Anomaly-and-Change-Dtecection/
       git submodule update --init --recursive
       ```
    2. Run
