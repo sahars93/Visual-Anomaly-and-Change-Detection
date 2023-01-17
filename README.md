@@ -15,16 +15,12 @@ This work proposes a comprehensive deep learning framework for detecting anomali
       ```
       git clone git@github.com:sahars93/Visual-Anomaly-and-Change-Dtecection-.git
       ```
-   1. Install Detectron2
+   1. Install Detectron2 and Superpoint:
       ```
+      cd Visual-Anomaly-and-Change-Dtecection-/
       git submodule update --init --recursive
       ```
-   2. Install superpoint:
-      ```
-      cd self_calibration
-      git submodule update --init --recursive
-      ```
-   3. Run
+   2. Run
       ```
       python3 final_anomaly_detection.py
 
