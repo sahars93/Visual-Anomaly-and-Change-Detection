@@ -24,6 +24,7 @@ Full paper PDF: [Self-Calibrating Anomaly and Change Detection for Autonomous In
       python3 final_anomaly_detection.py
 
 ## Self-Calibration
+
 <div align=center>
   <img src="./self_calibration/calibration_results/cameras_key_thresh0.003.png" width="500" />
   <p align="center">Calubration results for three different cameras</p>
@@ -32,4 +33,10 @@ Full paper PDF: [Self-Calibrating Anomaly and Change Detection for Autonomous In
 
 
 ## Results
+
+<div align=center>
+  <img src="./output_images/a_final.jpg" width="240" />
+  <p align="center">reference image</p>
+</div>
+
 ![](./output_images/all_together.png)
