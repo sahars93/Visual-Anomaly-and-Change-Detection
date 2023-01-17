@@ -35,7 +35,7 @@ Full paper PDF: [Self-Calibrating Anomaly and Change Detection for Autonomous In
 ## Results
 
 <div align=center>
-  <img src="./output_images/a_final.jpg" width="240" />
+  <img src="./input_images/a_final.jpg" width="240" />
   <p align="center">reference image</p>
 </div>
 
