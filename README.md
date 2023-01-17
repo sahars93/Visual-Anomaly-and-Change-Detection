@@ -40,4 +40,6 @@ Reference image            |  Query image            |  Feature extraction in ov
 <img src="./input_images/c1.jpg" width="240" height="160" />  |  <img src="./input_images/c2.jpg" width="240" height="160" />  |  <img src="./output_images/overlapedPoints12.jpg" width="240" height="160" />  |  <img src="./output_images/a_final12.jpg" width="240" height="160" />
 <img src="./input_images/a1.jpg" width="240" height="160" />  |  <img src="./input_images/a2.jpg" width="240" height="160" />  |  <img src="./output_images/overlapedPoints2.jpg" width="240" height="160" />  |  <img src="./output_images/a_final2.jpg" width="240" height="160" />
 
+### Results in more detail
+
 ![](./output_images/all_together.png)
